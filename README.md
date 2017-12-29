@@ -13,3 +13,5 @@ We have designed different models for this experiment. To Identify Sample and No
 ## Test Our Model
 
 To test our models, we have to handle scaling our image to the range [0, 1], converting it to an array and adding an extra dimension. As we train/classify images in batches with CNNs. Adding an extra dimension to the array using Numpy arrays which allows our image to have the shape that we want. all our models succeeded with defining Samples and Non Samples and what kind of sample it is. 
+
+## Final Results are in Results Folder 
