@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## An Intelligence Device Used to Detect and Autofocus 3D Microstructures from Ordinary Optical Microscope
 
-You can use the [editor on GitHub](https://github.com/isrugeek/2dto3d/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+By using three stepper motors to control X-Y-Z position knobs and one servo motor to control the focusing knob, all motors connected to their equivalent Arduinos using PWM digital output and Arduinos connected to NVIDIA Jetson TX2 using a Serial USB cable. From starting point (X0, Y0, Z0) and ending point (Xn, Yn, Zn) on the microscope slide the sample finding mechanism is continuous in a given Z direction where there will be an increment in X till it reaches Xn Then Y after Y increased in one value X starts from X0 to Xn when Y reach Yn Z will increase by one value . A Python script backend with Computer Vision and Machine Learning will see each pixel and control the move of the motors and to find any samples in detected XY area if the sample is matched with our sample it will proceed to the next step else it will continue the process till the ending point (Xn, Yn, Zn) of the microscope slide.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### The AI algorithm 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+From finding the microstructures , matching the sample from microscope slide to plotting the equivalent 3D model we use AI. The whole programming language is written using Python. OpenCV, Tensorflow, Keras, Scikit and MatPlot Lib are widely used libraries. We have different scripts for different use. In this paper we will discuss depending on their features. Under training phase, we need to collect dataset and and labeling them then train our model. The second one is using our trained models to find the detect sample. The third one is matching the sample. The forth one is detect and separate the edges to make the 3D Model. All phases and their sub parts are discussed below. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/isrugeek/2dto3d/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
